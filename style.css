@@ -1,0 +1,175 @@
+:root {
+    --pink: #cb6060;
+    --bg: #c83636;
+    --shadow: 0 2px 2px rgb(0 0 0 / 10);
+    --shadows: 0 2px 2px rgba(255, 255, 255, 0.109);
+    --shadowss: 0 2px 2px rgba(255 255 255 / 5);
+    --shadowsss: 0 2px 2px rgba(159, 147, 37, 0.889);
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Edu SA Beginner';
+    min-height: 2000px;
+}
+
+.hero::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image: url(img/cv.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter:grayscale();    
+} 
+
+.hero {
+    position: relative;
+    /*background-color: var(--bg);*/
+    min-height: 100vh;
+    
+ }
+
+.hero h1{
+    font-size: 5rem;
+    font-weight: 400, bold;
+    text-shadow: var(--shadow);
+}
+
+.hero h2{
+    font-size: 0.7rem;
+    text-shadow: var(--shadows);
+}
+
+.hero a:hover{
+    background-color: black;
+    box-shadow: var(--shadows);
+}
+
+.hero a {
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.437);
+}
+
+.mynavbar{
+    background-color: rgba(255 255 255 / 0.3) !important;
+    backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas{
+    height: 100vh;
+}
+
+.mynavbar .navbar-brand, .mynavbar .offcanvas-title{
+   font-family: 'Caveat' ;
+   font-size: 3.2rem; 
+   font-weight: bold;
+   text-shadow: var(--shadowss);
+}
+
+.mynavbar .nav-link {
+    font-family: 'Edu SA Beginner' ;
+    font-weight: 700;
+    text-shadow: var(--shadowss);
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+}
+
+.mynavbar .offcanvas-header {
+    text-shadow: var(--shadow);
+}
+
+.kata{
+    background-color: black;
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: -1rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+.kata h1 {
+    font-family: 'Caveat' ;
+    color: rgb(249, 217, 31);
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: var(--shadowsss) ;
+}
+
+.image {
+    
+    background-color: black;
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: -6rem;
+    padding-top: 20rem;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+.image::before{
+    content: '';
+    position: absolute;
+    top: 7rem;
+    left:0;
+    width:50%;
+    height:80%;
+    background-image: url(img/kfc.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: +1;
+    filter:brightness();  
+}
+
+.image p {
+    font-family: 'Caveat' ;
+    font-size: 1.5rem;
+    left: 50%;
+}
+
+.harapan{
+    background-color: black;
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: -1rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+.harapan h1 {
+    font-family: 'Caveat' ;
+    color: rgb(249, 217, 31);
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: var(--shadowsss) ;
+}
+
+/* Media Queries */
+/*laptop */
+@media (max-width: 992px){
+    html{
+        font-size: 75%;
+    }
+}
+/*tablet */
+@media (max-width: 768px){
+    html{
+        font-size: 70%;
+    }
+    .mynavbar .nav-link {
+        font-size: 1.5rem;
+        text-align:center;
+    }
+}
+/*mobile phone */
+@media (max-width: 576px){
+    html{
+        font-size: 65%;
+    }
+}
